@@ -29,4 +29,18 @@ describe('CreateTaskScreen - Integración', () => {
       expect(screen.getByText('Tarea creada exitosamente')).toBeTruthy();
     });
   });
+
+  it('muestra la tarea creada en la lista', async () => {
+    await renderScreen();
+
+    await fireEvent.changeText(
+      screen.getByPlaceholderText('Escribe el título de la tarea'),
+      'Comprar pan'
+    );
+    await fireEvent.press(screen.getByText('Guardar'));
+
+    await waitFor(() => {
+      expect(screen.getByText('Comprar pan')).toBeTruthy();
+    });
+  });
 });
