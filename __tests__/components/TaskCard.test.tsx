@@ -8,6 +8,7 @@ const mockTask = {
   status: 'pending' as const,
 };
 
+// Se mockea onDelete para aislar la tarjeta de la logica de borrado y verificar el id emitido.
 const mockOnDelete = jest.fn();
 
 describe('TaskCard', () => {
@@ -17,6 +18,7 @@ describe('TaskCard', () => {
 
   it('muestra el título de la tarea', async () => {
     await render(<TaskCard task={mockTask} onDelete={mockOnDelete} />);
+    expect(screen.getByRole('button')).toBeTruthy();
     expect(screen.getByText('Estudiar React Native')).toBeTruthy();
   });
 

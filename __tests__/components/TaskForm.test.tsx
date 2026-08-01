@@ -4,6 +4,7 @@ import { TaskForm } from '../../src/components/TaskForm';
 
 describe('TaskForm', () => {
   it('llama a onSubmit con el título ingresado al presionar "Guardar"', async () => {
+    // Se mockea onSubmit para validar el comportamiento del formulario sin crear tareas reales.
     const mockOnSubmit = jest.fn();
     await render(<TaskForm onSubmit={mockOnSubmit} />);
 
@@ -17,6 +18,7 @@ describe('TaskForm', () => {
   });
 
   it('no llama a onSubmit si el campo está vacío', async () => {
+    // Se mockea onSubmit para confirmar que la validacion bloquea el envio vacio.
     const mockOnSubmit = jest.fn();
     await render(<TaskForm onSubmit={mockOnSubmit} />);
 
