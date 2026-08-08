@@ -1,0 +1,15 @@
+appId: com.taskmanager.app
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"
+- tapOn: "Tablero Remoto"
+- assertVisible: "Tablero remoto"
+- assertVisible: "Nueva tarea remota"
+- tapOn:
+    id: "input-tarea-remota"
+- inputText: "Preparar evidencia E2E"
+- tapOn:
+    id: "boton-sincronizar-tarea"
+- assertVisible: "Tarea sincronizada con la API"
+- assertVisible: "Preparar evidencia E2E"

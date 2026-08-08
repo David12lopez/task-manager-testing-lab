@@ -16,6 +16,12 @@ const ACCESOS: { href: string; titulo: string; descripcion: string; className: s
     descripcion: 'Datos de usuario, envío y pago',
     className: 'bg-emerald-600 active:bg-emerald-700',
   },
+  {
+    href: '/sync',
+    titulo: 'Tablero Remoto',
+    descripcion: 'API simulada, errores y datos vacios',
+    className: 'bg-cyan-700 active:bg-cyan-800',
+  },
 ];
 
 export function HomeScreen() {
