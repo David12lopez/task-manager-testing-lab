@@ -18,7 +18,7 @@ const renderScreen = () =>
     </SafeAreaProvider>
   );
 
-describe('RemoteTaskBoardScreen - integracion con MSW', () => {
+describe('RemoteTaskBoardScreen - integración con MSW', () => {
   it('carga tareas de la API y agrega una nueva con respuesta exitosa', async () => {
     server.use(
       http.get(REMOTE_TASKS_URL, () =>
@@ -54,7 +54,7 @@ describe('RemoteTaskBoardScreen - integracion con MSW', () => {
 
     const view = await renderScreen();
 
-    expect(await view.findByText('La API respondio sin tareas')).toBeTruthy();
+    expect(await view.findByText('La API respondió sin tareas')).toBeTruthy();
 
     await fireEvent.changeText(view.getByTestId('input-tarea-remota'), 'Caso con API caida');
     await fireEvent.press(view.getByTestId('boton-sincronizar-tarea'));
@@ -71,7 +71,7 @@ describe('RemoteTaskBoardScreen - integracion con MSW', () => {
     const view = await renderScreen();
 
     await waitFor(() => {
-      expect(view.getByText('La API respondio sin tareas')).toBeTruthy();
+      expect(view.getByText('La API respondió sin tareas')).toBeTruthy();
       expect(view.queryByText('1 tarea remota')).toBeNull();
     });
   });

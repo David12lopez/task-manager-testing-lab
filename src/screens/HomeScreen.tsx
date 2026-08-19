@@ -19,7 +19,7 @@ const ACCESOS: { href: string; titulo: string; descripcion: string; className: s
   {
     href: '/sync',
     titulo: 'Tablero Remoto',
-    descripcion: 'API simulada, errores y datos vacios',
+    descripcion: 'API simulada, errores y datos vacíos',
     className: 'bg-cyan-700 active:bg-cyan-800',
   },
 ];

@@ -11,7 +11,7 @@ export function RemoteTaskFeed({ tasks, empty = false }: RemoteTaskFeedProps) {
   if (empty) {
     return (
       <Text accessibilityRole="text" className="rounded-lg bg-amber-50 p-4 text-center text-amber-800">
-        La API respondio sin tareas
+        La API respondió sin tareas
       </Text>
     );
   }

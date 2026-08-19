@@ -9,6 +9,7 @@ appId: com.taskmanager.app
 - tapOn:
     id: "input-tarea-remota"
 - inputText: "Preparar evidencia E2E"
+- hideKeyboard
 - tapOn:
     id: "boton-sincronizar-tarea"
 - assertVisible: "Tarea sincronizada con la API"

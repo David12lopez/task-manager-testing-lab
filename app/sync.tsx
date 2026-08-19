@@ -1,1 +1,5 @@
-export { RemoteTaskBoardScreen as default } from '../src/screens/RemoteTaskBoardScreen';
+import { RemoteTaskBoardScreen } from '../src/screens/RemoteTaskBoardScreen';
+
+export default function SyncRoute() {
+  return <RemoteTaskBoardScreen />;
+}

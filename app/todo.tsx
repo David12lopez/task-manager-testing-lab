@@ -1,1 +1,5 @@
-export { CreateTaskScreen as default } from '../src/screens/CreateTaskScreen';
+import { CreateTaskScreen } from '../src/screens/CreateTaskScreen';
+
+export default function TodoRoute() {
+  return <CreateTaskScreen />;
+}

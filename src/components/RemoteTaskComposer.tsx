@@ -24,7 +24,7 @@ export function RemoteTaskComposer({ disabled = false, onSubmit }: RemoteTaskCom
         value={title}
         onChangeText={setTitle}
         accessibilityLabel="Nombre de la tarea remota"
-        accessibilityHint="Escribe una tarea que sera enviada a la API simulada"
+        accessibilityHint="Escribe una tarea que será enviada a la API simulada"
         className="rounded-md border border-slate-300 px-3 py-3 text-base text-slate-950"
       />
       <Pressable

@@ -18,7 +18,7 @@ export function RemoteTaskBoardScreen() {
     >
       <Text className="text-2xl font-bold text-slate-950">Tablero remoto</Text>
       <Text className="text-sm text-slate-600">
-        Flujo con API simulada para validar integracion, errores y datos vacios.
+        Flujo con API simulada para validar integración, errores y datos vacíos.
       </Text>
 
       <RemoteTaskComposer disabled={isBusy} onSubmit={addTask} />
