@@ -18,7 +18,7 @@ describe('TaskForm', () => {
   });
 
   it('no llama a onSubmit si el campo está vacío', async () => {
-    // Se mockea onSubmit para confirmar que la validacion bloquea el envio vacio.
+    // Se mockea onSubmit para confirmar que la validación bloquea el envío vacío.
     const mockOnSubmit = jest.fn();
     await render(<TaskForm onSubmit={mockOnSubmit} />);
 

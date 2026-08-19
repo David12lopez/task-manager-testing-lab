@@ -1,4 +1,5 @@
 import { Task } from '../types';
+import { RemoteTaskListSchema, RemoteTaskSchema } from '../schemas/remoteTaskSchema';
 
 export const REMOTE_TASKS_URL = 'https://api.taskmanager.com/remote-tasks';
 
@@ -30,7 +31,7 @@ export async function fetchRemoteTasks(): Promise<Task[]> {
     throw new Error('No se pudo consultar el tablero remoto');
   }
 
-  return response.json();
+  return RemoteTaskListSchema.parse(await response.json());
 }
 
 export async function saveRemoteTask(title: string): Promise<Task> {
@@ -56,5 +57,5 @@ export async function saveRemoteTask(title: string): Promise<Task> {
     throw new Error('No se pudo guardar la tarea remota');
   }
 
-  return response.json();
+  return RemoteTaskSchema.parse(await response.json());
 }

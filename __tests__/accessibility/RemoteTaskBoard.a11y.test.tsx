@@ -4,7 +4,7 @@ import { RemoteTaskComposer } from '../../src/components/RemoteTaskComposer';
 import { RemoteTaskFeed } from '../../src/components/RemoteTaskFeed';
 
 describe('Accesibilidad del tablero remoto', () => {
-  it('expone nombre accesible en el campo y boton principal', async () => {
+  it('expone nombre accesible en el campo y botón principal', async () => {
     const view = await render(<RemoteTaskComposer onSubmit={jest.fn().mockResolvedValue(false)} />);
 
     expect(view.getByLabelText('Nombre de la tarea remota')).toBeTruthy();
@@ -14,7 +14,7 @@ describe('Accesibilidad del tablero remoto', () => {
     expect(view.getByRole('button', { name: 'Sincronizar tarea remota' })).toBeTruthy();
   });
 
-  it('marca el boton como deshabilitado mientras la pantalla esta ocupada', async () => {
+  it('marca el botón como deshabilitado mientras la pantalla está ocupada', async () => {
     const submit = jest.fn().mockResolvedValue(false);
     const view = await render(<RemoteTaskComposer disabled onSubmit={submit} />);
 
